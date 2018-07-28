@@ -1,7 +1,6 @@
 ###############################
 #
 #This scipt is used to find all instances (Running/Stopped) from all regions
-<<<<<<< HEAD
 #It dispays result in a PyTable
 #
 ##### Server Requirements ####################
@@ -11,7 +10,6 @@
 # AWS CLI       # pip3 install awscli , # aws configure
 # Boto3         # pip install boto3
 # PrettyTable   # pip3 install PrettyTable
-=======
 #It dispays Instane_ID, Instance_type, Instance_state
 #
 ##### Server Requirements ####################
@@ -20,7 +18,6 @@
 # Pip     - # apt-get install -y python3-pip
 # AWS CLI - # pip3 install awscli , # aws configure
 # Boto3   - # pip install boto3
->>>>>>> 2fd20708be30f66ec650501cf1b2805ca47de0b2
 ##############################################
 #
 # Written by Reny Ouseph
@@ -62,7 +59,6 @@ for REGION in All_Region:
                 All_Instance[REGION].append({'Inastance_ID':'{}'.format(instance.id),'Inastance_type':'{}'.format(instance.instance_type),\
                                              'Inastance_state':'{}'.format(instance.state["Name"])})
 
-<<<<<<< HEAD
 #print("Running and Stopped Instance : {}".format(All_Instance))  ### Please uncomment this line if you need a detailed result.
 
 print("")
@@ -86,6 +82,4 @@ for region in All_Instance.keys():
     total_count = running_count + stopped_count
     result.add_row([region,total_count,running_count,stopped_count])
 print(result)
-=======
 print("Running and Stopped Instance : {}".format(All_Instance))
->>>>>>> 2fd20708be30f66ec650501cf1b2805ca47de0b2
